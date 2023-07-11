@@ -4,9 +4,8 @@ import { useRef, forwardRef } from 'react';
 import { MenuItem, menuItems } from './constants/menu'
 import Education from './education.tsx/page';
 import Work from './work/page';
-import Portfolio from './portfolio/page';
 import Skills from './skills/page';
-import Contact from './contact/page';
+import Contact from './contactLink/page';
 import PortfolioLink from './portfolioLink/page';
 
 export default function Home() {
