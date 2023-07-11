@@ -5,18 +5,23 @@ export interface MenuItem {
 
 export const menuItems: Array<MenuItem> = [
     {
-        label: "Education"
+        label: "Education",
+        to: "menu-item-0"
     },
     {
-        label: "Work Experience"
+        label: "Experience",
+        to: "menu-item-1"
     },
     {
-        label: "My Portfolio"
+        label: "Portfolio",
+        to: "menu-item-2"
     },
     {
-        label: "Technical Skills"
+        label: "Skills",
+        to: "menu-item-3"
     },
     {
-        label: "Contact"
+        label: "Contact",
+        to: "menu-item-4"
     }
 ]

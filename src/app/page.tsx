@@ -1,96 +1,72 @@
+'use client'
+
+import { useRef, forwardRef } from 'react';
 import { MenuItem, menuItems } from './constants/menu'
-import { EducationItem, educationItems } from './constants/education'
-import { WorkItem, workItems } from './constants/work'
+import Education from './education.tsx/page';
+import Work from './work/page';
+import Portfolio from './portfolio/page';
+import Skills from './skills/page';
+import Contact from './contact/page';
+import PortfolioLink from './portfolioLink/page';
 
 export default function Home() {
+  const sectionRefs = useRef<HTMLDivElement[]>([]);
+  const menuRef = useRef<HTMLDivElement>();
+  const scrollToSelector = (id: string) => {
+    const ref = sectionRefs.current.find((ref: any) => ref.id === id);
+    if (ref && menuRef.current) {
+      const { top, height } = menuRef.current.getBoundingClientRect();
+      const offset = top + height;
+      const targetTop = ref.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth',
+      });
+    }
+  }
+
+  const addInputRef = (ref: HTMLInputElement | null) => {
+    if (ref) {
+      sectionRefs.current.push(ref);
+    }
+  };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 pt-32">
-    <div className="max-w-5xl w-full">
-    <div className="fixed right-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-3 mb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-        <ul className="flex">
-          {menuItems.map((item: MenuItem, i: number) => (
-            <li key={`menu-item-${i}`} className={["px-5", i < menuItems.length - 1 ? "border-r-2 border-white" : null].join(" ")}>
-              <a href={`#menu-item-${i}`} className="hover:text-blue-500 hover:dark:border-neutral-700 hover:dark:text-blue-500">{item.label}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8">
+      <div className="max-w-5xl w-full sm:static">
+        <div ref={(ref: any) => menuRef.current = ref} className="fixed right-0 top-0 flex w-full justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-3 mb-6 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800 z-40 overflow-x-auto">
+          <ul className="flex">
+            {menuItems.map((item: MenuItem, i: number) => (
+              <li key={`menu-item-${i}`} className={["px-5", i < menuItems.length - 1 ? "border-r-2 border-white" : null].join(" ")}>
+                <button onClick={() => scrollToSelector(item.to || "")} className="hover:text-blue-500 hover:dark:border-neutral-700 hover:dark:text-blue-500">{item.label}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <div className="grid gap-8 text-center lg:grid-cols-1">
-        <section id='menu-item-0'>
-          <h2 className="mb-3 text-2xl font-semibold">Education</h2>
-          {educationItems.map((item: EducationItem, i: number) => (
-            <div key={`education-item-${i}`} className={["group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30", i < educationItems.length - 1 ? null : "mb-6"].join(" ")}>
-              <h4>{item.label}</h4>
-              <p className="m-0 text-sm opacity-50">{item.description}</p>
-            </div>
-          ))}
-        </section>
+        <div className="grid gap-4 text-center lg:grid-cols-1">
+          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-0'>
+            <Education />
+          </section>
 
-        <section id='menu-item-1'>
-          <h2 className="mb-3 text-2xl font-semibold">Work Experience</h2>
-          {workItems.map((item: WorkItem, i: number) => (
-            <div key={`work-item-${i}`} className={["group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30", i < workItems.length - 1 ? null : "mb-6"].join(" ")}>
-              <h4>{item.label}</h4>
-              <h6 className="text-sm opacity-70">{item.job_name}</h6>
-              <p className="m-0 text-sm opacity-50">{item.description}</p>
-            </div>
-          ))}
-        </section>
-
-        <a
-          href="#"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 id='menu-item-2' className={`mb-3 text-2xl font-semibold`}>
-            My Portfolio{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Check out some sample Codes and Apps I have done
-          </p>
-        </a>
-
-        <a
-          href="#"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 id='menu-item-3'className={`mb-3 text-2xl font-semibold`}>
-            Technical Skills{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Here is a list of my skills and my level of confidence for each entry
-          </p>
-        </a>
-
-        <a
-          href="#"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_self"
-          rel="noopener noreferrer"
-        >
-          <h2 id='menu-item-4' className={`mb-3 text-2xl font-semibold`}>
-            Contact {' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Here are some ways to contact me
-          </p>
-        </a>
-        <footer>
+          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-1'>
+            <Work />
+          </section>
           
-        </footer>
+          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-3'>
+            <Skills />
+          </section>     
+
+          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-2'>
+            <PortfolioLink />
+          </section>
+
+          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-4'>
+            <Contact />
+          </section> 
+
+          <footer>
+
+          </footer>
         </div>
       </div>
     </main>
