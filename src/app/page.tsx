@@ -51,11 +51,11 @@ export default function Home() {
             <Work />
           </section>
           
-          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-3'>
+          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-2'>
             <Skills />
           </section>     
 
-          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-2'>
+          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-3'>
             <PortfolioLink />
           </section>
 

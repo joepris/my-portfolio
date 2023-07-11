@@ -13,11 +13,11 @@ export const menuItems: Array<MenuItem> = [
         to: "menu-item-1"
     },
     {
-        label: "Portfolio",
+        label: "Skills",
         to: "menu-item-2"
     },
     {
-        label: "Skills",
+        label: "Portfolio",
         to: "menu-item-3"
     },
     {
