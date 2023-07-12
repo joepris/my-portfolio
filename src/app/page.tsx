@@ -29,6 +29,7 @@ export default function Home() {
       sectionRefs.current.push(ref);
     }
   };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8">
       <div className="max-w-5xl w-full sm:static">
