@@ -5,9 +5,7 @@ import { useRef, useState } from "react";
 
 export default function Skills({
   children,
-}: {
-  children?: React.ReactNode
-}) {
+}: any) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesToShow = 4; // Number of slides to show at a time
 
