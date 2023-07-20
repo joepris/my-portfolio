@@ -1,72 +1,84 @@
 'use client'
 
-import { useRef, forwardRef } from 'react';
+import { useRef, forwardRef, useState, useEffect } from 'react';
 import { MenuItem, menuItems } from './constants/menu'
-import Education from './education.tsx/page';
-import Work from './work/page';
-import Skills from './skills/page';
-import Contact from './contactLink/page';
-import PortfolioLink from './portfolioLink/page';
+import Education from './components/sections/home';
+import Work from './components/sections/work';
+import Skills from './components/sections/skills';
+import Footer from './footer/page';
+import Portfolio from './components/sections/portfolio';
 
 export default function Home() {
   const sectionRefs = useRef<HTMLDivElement[]>([]);
   const menuRef = useRef<HTMLDivElement>();
-  const scrollToSelector = (id: string) => {
-    const ref = sectionRefs.current.find((ref: any) => ref.id === id);
-    if (ref && menuRef.current) {
-      const { top, height } = menuRef.current.getBoundingClientRect();
-      const offset = top + height;
-      const targetTop = ref.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({
-        top: targetTop,
-        behavior: 'smooth',
-      });
-    }
-  }
+  const [selected, setSelected] = useState<any>('menu-item-0');
 
-  const addInputRef = (ref: HTMLInputElement | null) => {
+  const [colors, setColors] = useState<any>({});
+
+  const addRef = (ref: HTMLInputElement | null) => {
     if (ref) {
       sectionRefs.current.push(ref);
     }
   };
 
+  useEffect(() => {
+    if (selected) {
+      setColors((prev: any) => {
+        let bgColor;
+        switch (selected) {
+          case 'menu-item-1':
+            bgColor = 'bg-cyan-800';
+            break;
+          case 'menu-item-2':
+            bgColor = 'bg-emerald-700';
+            break;
+          default:
+            bgColor = 'bg-slate-800';
+            break;
+        }
+
+        return {
+          ...prev,
+          background: bgColor
+        }
+      })
+    }
+  }, [selected])
+
+  const sectionClassName = "transition-all duration-1000 fixed w-full h-full left-0";
+  const sectionStandard = "w-full sm:w-2/3 md:w-1/2 sm:mx-auto";
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-4 sm:p-8">
+    <main className={`transition-colors duration-1000 flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 ${colors.background || ''}`.trim()}>
       <div className="max-w-5xl w-full sm:static">
-        <div ref={(ref: any) => menuRef.current = ref} className="fixed right-0 top-0 flex w-full justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-3 mb-6 pt-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800 z-40 overflow-x-auto">
-          <ul className="flex">
+        <div ref={(ref: any) => menuRef.current = ref} className="fixed right-0 top-0 flex w-full justify-between sm:justify-center border-b bg-gradient-to-b from-zinc-700 mb-6 backdrop-blur-2xl border-neutral-800 bg-zinc-800 z-1 overflow-x-auto">
+          <ul className="flex mb-3 mt-4">
             {menuItems.map((item: MenuItem, i: number) => (
               <li key={`menu-item-${i}`} className={["px-5", i < menuItems.length - 1 ? "border-r-2 border-white" : null].join(" ")}>
-                <button onClick={() => scrollToSelector(item.to || "")} className="hover:text-blue-500 hover:dark:border-neutral-700 hover:dark:text-blue-500">{item.label}</button>
+                <button onClick={() => setSelected(item.to || "")} className="text-xs sm:text-normal hover:text-blue-500 hover:dark:border-neutral-700 hover:dark:text-blue-500">{item.label}</button>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="grid gap-4 text-center lg:grid-cols-1">
-          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-0'>
-            <Education />
+        <div className={`relative mt-12 sm:mt-8`}>
+          <section ref={(ref: any) => addRef(ref)} id='menu-item-0' className={[sectionClassName, selected === 'menu-item-0' ? 'opacity-100' : 'opacity-0 -translate-x-full'].join(' ')}>
+            <Education onPortfolioLinkClick={() => setSelected('menu-item-3')} className={sectionStandard} />
           </section>
 
-          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-1'>
-            <Work />
-          </section>
-          
-          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-2'>
-            <Skills />
-          </section>     
-
-          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-3'>
-            <PortfolioLink />
+          <section ref={(ref: any) => addRef(ref)} id='menu-item-1' className={[sectionClassName, selected === 'menu-item-1' ? 'opacity-100' : 'opacity-0 translate-x-full'].join(' ')}>
+            <Work className={sectionStandard} />
           </section>
 
-          <section ref={(ref: any) => addInputRef(ref)} id='menu-item-4'>
-            <Contact />
-          </section> 
+          <section ref={(ref: any) => addRef(ref)} id='menu-item-2' className={[sectionClassName, selected === 'menu-item-2' ? 'opacity-100' : 'opacity-0 -translate-x-full'].join(' ')}>
+            <Skills className={sectionStandard} />
+          </section>
 
-          <footer>
+          <section ref={(ref: any) => addRef(ref)} id='menu-item-3' className={[sectionClassName, selected === 'menu-item-3' ? 'opacity-100' : 'opacity-0 translate-x-full'].join(' ')}>
+            <Portfolio className="w-full sm:w-3/4 sm:mx-auto" />
+          </section>
 
-          </footer>
+          <Footer />
         </div>
       </div>
     </main>

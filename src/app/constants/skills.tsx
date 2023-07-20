@@ -19,7 +19,7 @@ export const skillItems: Array<SkillItem> = [
     },
     {
         label: "C++",
-        duration: "1 year"
+        duration: "6 months"
     },
     {
         label: "CSS / SCSS",
@@ -67,7 +67,7 @@ export const skillItems: Array<SkillItem> = [
     },
     {
         label: "OpenGL",
-        duration: "1 year",
+        duration: "3 months",
     },
     {
         label: "ReactJS",

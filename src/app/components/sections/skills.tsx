@@ -1,11 +1,9 @@
 'use client'
 
-import { SkillItem, skillItems } from "../constants/skills";
+import { SkillItem, skillItems } from "../../constants/skills";
 import { useRef, useState } from "react";
 
-export default function Skills({
-  children,
-}: any) {
+export default function Skills(props: any) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesToShow = 4; // Number of slides to show at a time
 
@@ -22,7 +20,7 @@ export default function Skills({
   };
 
   return (
-    <div className="relative">
+    <div className="relative" {...props}>
       <h2 id="menu-item-3" className="mb-3 text-2xl font-semibold">
         Technical Skills
       </h2>
@@ -74,7 +72,6 @@ export default function Skills({
         >
           &gt;
         </button>
-        {children && children}
       </div>
     </div>
   );
