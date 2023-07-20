@@ -4,7 +4,7 @@ export interface ProjectItem {
     description: string;
     to?: string;
     repository?: string;
-    images?: string[];
+    images: string[];
 }
 
 export const projectItems: Array<ProjectItem> = [
@@ -18,7 +18,7 @@ export const projectItems: Array<ProjectItem> = [
     },
     {
         title: "Hospital Scheduling App",
-        technology: "ASP.Net MVC (C#, HTML, CSS, Bootstrap, SQL Server, JavaScript, JQuery",
+        technology: "ASP.Net MVC (C#, HTML, CSS, Bootstrap, SQL Server, JavaScript, JQuery)",
         description: "Designed and created a scheduling web application to optimize scheduling and management processes within healthcare facilities. Leveraged expert proficiency in C# programming and the ASP.NET MVC framework to develop a robust and maintainable codebase.",
         to: "project-item-1",
         repository: "https://github.com/joepris/Scheduling-App",
@@ -39,6 +39,14 @@ export const projectItems: Array<ProjectItem> = [
         to: "project-item-2",
         repository: "https://github.com/joepris/pyramids-of-giza",
         images: ['opengl-pyramids-first.png', 'opengl-pyramids-second.png', 'opengl-pyramids-third.png', 'opengl-pyramids-code-sample.png']
+    },
+    {
+        title: "Sample Online Retail App",
+        technology: "ASP.Net MVC (C#, HTML, CSS, Bootstrap, SQL Server, JavaScript, JQuery)",
+        description: "Designed and created a scheduling web application to optimize scheduling and management processes within healthcare facilities. Leveraged expert proficiency in C# programming and the ASP.NET MVC framework to develop a robust and maintainable codebase.",
+        to: "project-item-1",
+        repository: "https://github.com/joepris/Scheduling-App",
+        images: ['mvc-schedule-dashboard.png', 'mvc-schedule-login.png', 'mvc-schedule-staffgap.png', 'mvc-schedule-code-sample.png']
     },
     {
         title: "Freedom Lawn",

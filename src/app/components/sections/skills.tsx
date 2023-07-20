@@ -61,13 +61,13 @@ export default function Skills(props: any) {
           })}
         </div>
         <button
-          className="absolute top-1/2 transform -translate-y-1/2 left-0 mx-2 px-2 py-1 z-4 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
+          className="absolute top-1/2 transform -translate-y-1/2 left-0 mx-2 px-2 py-1 z-40 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
           onClick={prevSlide}
         >
           &lt;
         </button>
         <button
-          className="absolute top-1/2 transform -translate-y-1/2 right-0 mx-2 px-2 py-1 z-4 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
+          className="absolute top-1/2 transform -translate-y-1/2 right-0 mx-2 px-2 py-1 z-40 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
           onClick={nextSlide}
         >
           &gt;
