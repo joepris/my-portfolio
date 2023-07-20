@@ -44,7 +44,7 @@ export default function Portfolio({
         {selectedImage && (
           <div
             key={selectedImage}
-            className={['flex flex-wrap w-1/3 transition-opacity duration-500 pb-20', selectedImage ? 'fixed bg-black left-0 top-0 w-screen h-screen z-[200] flex justify-center items-center' : 'hidden'].join(' ')}
+            className={['flex flex-wrap w-1/3 transition-opacity duration-500 pb-20', selectedImage ? 'fixed bg-black/70 left-0 top-0 w-screen h-screen z-[200] flex justify-center items-center' : 'hidden'].join(' ')}
             onClick={handleOutsideClicked}>
             <img
               className={['transition-all duration-200', selectedImage ? 'px-2 w-3/4 h-auto' : ''].join(' ')}
@@ -54,7 +54,7 @@ export default function Portfolio({
         )}
         {projectItems.map((item: ProjectItem, i: number) => {
           return (
-            <div key={`project-content-${i}`} className={['fixed w-full h-full left-1/2 -translate-x-1/2 sm:w-2/3 transition-opacity duration-1000 overflow-y-auto pb-60', selected === item.title ? 'opacity-100 z-40' : `opacity-0`].join(' ')}>
+            <div key={`project-content-${i}`} className={['fixed w-full h-full left-1/2 -translate-x-1/2 sm:w-2/3 transition-all duration-1000 overflow-y-auto pb-60', selected === item.title ? 'opacity-100 z-40' : `opacity-0`].join(' ')}>
               <h1 className="font-light pt-5 px-5 text-center text-xl">
                 {item.title}
               </h1>
