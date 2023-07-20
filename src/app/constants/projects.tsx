@@ -58,7 +58,7 @@ export const projectItems: Array<ProjectItem> = [
     {
         title: "Code Camp App",
         technology: "ReactJS, Webpack",
-        description: "Learned to create this web application from Peter Kellner throught Pluralsight. The creation of an interactive web application facilitating the dynamic display of speakers sourced from an extensive database. Leveraged the power of ReactJS and Webpack to create a seamless and intuitive user experience.",
+        description: "Learned to create this web application from Peter Kellner's crash course on React through Pluralsight. The creation of an interactive web application facilitating the dynamic display of speakers sourced from an extensive database. Leveraged the power of ReactJS and Webpack to create a seamless and intuitive user experience.",
         to: "project-item-5",
         repository: "https://github.com/joepris/codecampapp-from-learning",
         images: ['reactjs-codecamp-dashboard.png', 'reactjs-codecamp-dashboard-dark.png']
