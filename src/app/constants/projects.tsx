@@ -43,23 +43,23 @@ export const projectItems: Array<ProjectItem> = [
     {
         title: "Sample Online Retail App",
         technology: "ASP.Net MVC (C#, HTML, CSS, Bootstrap, SQL Server, JavaScript, JQuery)",
-        description: "Designed and created a scheduling web application to optimize scheduling and management processes within healthcare facilities. Leveraged expert proficiency in C# programming and the ASP.NET MVC framework to develop a robust and maintainable codebase.",
-        to: "project-item-1",
+        description: "Designed and created an Online Retail web application using ASP.Net MVC. It showed business items available, items in stock, and prices. Also has an Item detail page for more information for each item.",
+        to: "project-item-3",
         repository: "https://github.com/joepris/Scheduling-App",
-        images: ['mvc-schedule-dashboard.png', 'mvc-schedule-login.png', 'mvc-schedule-staffgap.png', 'mvc-schedule-code-sample.png']
+        images: ['mvc-retail-dashboard.png', 'mvc-retail-detail.png', 'mvc-retail-second.png', 'mvc-retail-code-add-sample.png']
     },
     {
         title: "Freedom Lawn",
         technology: "Website (HTML, CSS, JavaScript, 000webhost(Deployment)",
         description: "Developed and deployed a website for a fictitious lawn and snow blowing service company. Leveraged HTML, CSS, and JavaScript to create an engaging and responsive user interface. Hosted the website using 000webhost for convenient accessibility.",
-        to: "project-item-3",
+        to: "project-item-4",
         images: ['website-freedom-first.png', 'website-freedom-green.png', 'website-freedom-snow.png', 'website-freedom-embed.png', 'website-freedom-code-sample.png']
     },
     {
         title: "Code Camp App",
         technology: "ReactJS, Webpack",
         description: "Learned to create this web application from Peter Kellner throught Pluralsight. The creation of an interactive web application facilitating the dynamic display of speakers sourced from an extensive database. Leveraged the power of ReactJS and Webpack to create a seamless and intuitive user experience.",
-        to: "project-item-4",
+        to: "project-item-5",
         repository: "https://github.com/joepris/codecampapp-from-learning",
         images: ['reactjs-codecamp-dashboard.png', 'reactjs-codecamp-dashboard-dark.png']
     }
