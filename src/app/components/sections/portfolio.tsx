@@ -54,7 +54,7 @@ export default function Portfolio({
         )}
         {projectItems.map((item: ProjectItem, i: number) => {
           return (
-            <div key={`project-content-${i}`} className={['fixed w-full h-full left-1/2 -translate-x-1/2 sm:w-2/3 transition-opacity duration-1000 overflow-y-auto pb-60', selected === item.title ? 'opacity-100 z-40' : `opacity-0 ${i % 2 === 0 ? '-translate-x-full left-0' : 'translate-x-full right-0 '}`].join(' ')}>
+            <div key={`project-content-${i}`} className={['fixed w-full h-full left-1/2 -translate-x-1/2 sm:w-2/3 transition-opacity duration-1000 overflow-y-auto pb-60', selected === item.title ? 'opacity-100 z-40' : `opacity-0`].join(' ')}>
               <h1 className="font-light pt-5 px-5 text-center text-xl">
                 {item.title}
               </h1>
