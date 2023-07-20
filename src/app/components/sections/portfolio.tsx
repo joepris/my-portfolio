@@ -78,7 +78,7 @@ export default function Portfolio({
 
               )}
               <a href={[item.repository != undefined ? item.repository : "#"].join()} target="blank" rel="noopener noreferrer" className="text-stone-100">
-                Visti the Source Code: <i className="!flex !flex-row !justify-center fab fa-github px-5 p-2">github repository</i>
+                <i className="!flex !flex-row !justify-center fab fa-github px-5 p-2 hover:text-yellow-500">&nbsp;Visit the Source Code</i>
               </a>
             </div>
 
