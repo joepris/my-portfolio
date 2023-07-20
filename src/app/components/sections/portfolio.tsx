@@ -33,7 +33,7 @@ export default function Portfolio({
         {projectItems.map((item: ProjectItem, i: number) => {
           return (
             <div key={`project-content-${i}`} className={['fixed w-full h-full sm:w-2/3 transition-opacity duration-1000', selected === item.title ? 'opacity-100' : `opacity-0 left - 0 bottom-0 w-0 h-0 ${i % 2 === 0 ? '-translate-x-full' : 'translate-x-full'}`].join(' ')}>
-              <h1 className="font-light pt-5 pl-5">
+              <h1 className="font-light pt-5 pl-5 text-center text-xl">
                 {item.title}
               </h1>
               <h4 className="p-1 pl-5">Technologies used: {item.technology}</h4>

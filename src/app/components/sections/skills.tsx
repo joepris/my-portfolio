@@ -21,7 +21,7 @@ export default function Skills(props: any) {
 
   return (
     <div className="relative" {...props}>
-      <h2 id="menu-item-3" className="mb-3 text-2xl font-semibold">
+      <h2 id="menu-item-3" className="mb-3 text-2xl font-semibold text-center">
         Technical Skills
       </h2>
       <div className="relative mt-16">
@@ -61,13 +61,13 @@ export default function Skills(props: any) {
           })}
         </div>
         <button
-          className="absolute top-1/2 transform -translate-y-1/2 left-0 px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
+          className="absolute top-1/2 transform -translate-y-1/2 left-0 mx-2 px-2 py-1 z-4 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
           onClick={prevSlide}
         >
           &lt;
         </button>
         <button
-          className="absolute top-1/2 transform -translate-y-1/2 right-0 px-2 py-1 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
+          className="absolute top-1/2 transform -translate-y-1/2 right-0 mx-2 px-2 py-1 z-4 bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 rounded"
           onClick={nextSlide}
         >
           &gt;
