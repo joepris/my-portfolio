@@ -30,7 +30,7 @@ export const projectItems: Array<ProjectItem> = [
         description: "Delved into SQL fundamentals, including filtering, functions, and table creation, through hands-on practice. Gained valuable insights into database management and querying techniques.",
         to: "project-item-2",
         repository: "https://github.com/joepris",
-        images: ['mvc-schedule-zsql0.png', 'mvc-schedule-zsql1.png', 'mvc-schedule-zsql2.png', 'mvc-schedule-zsql3.png']
+        images: ['mvc-schedule-zsql0.png', 'mvc-schedule-zsql1.png', 'mvc-schedule-zsql2.png', 'mvc-schedule-zsql3.png', 'sql-select-first.png', 'sql-select-second.png']
     },
     {
         title: "Pyramids of Giza",

@@ -58,6 +58,10 @@ export const skillItems: Array<SkillItem> = [
         duration: "1 year"
     },
     {
+        label: "NextJS",
+        duration: "1 year"
+    },
+    {
         label: "NoSQL",
         duration: "1 year"
     },

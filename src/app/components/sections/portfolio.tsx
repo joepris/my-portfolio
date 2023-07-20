@@ -31,7 +31,7 @@ export default function Portfolio({
           return (
             <div key={`project-item-${i}`} className="">
               <button
-                className="rounded-full border-slate-200 border-2 w-8 h-8 text-xs"
+                className="rounded-full hover:text-yellow-500 hover:border-yellow-500 border-slate-200 border-2 w-8 h-8 text-xs"
                 onClick={() => setSelected(item.title)}>
                 {i + 1}
               </button>
@@ -78,7 +78,7 @@ export default function Portfolio({
 
               )}
               <a href={[item.repository != undefined ? item.repository : "#"].join()} target="blank" rel="noopener noreferrer" className="text-stone-100">
-                <i className="!flex !flex-row !justify-center fab fa-github px-5 p-2">github repository</i>
+                Visti the Source Code: <i className="!flex !flex-row !justify-center fab fa-github px-5 p-2">github repository</i>
               </a>
             </div>
 
