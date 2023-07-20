@@ -58,7 +58,7 @@ export const skillItems: Array<SkillItem> = [
         duration: "1 year"
     },
     {
-        label: "No SQL",
+        label: "NoSQL",
         duration: "1 year"
     },
     {
