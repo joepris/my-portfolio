@@ -33,18 +33,18 @@ export default function Skills(props: any) {
             const positionClass =
               slideIndex === currentSlide
                 ? itemIndex === 0
-                  ? "top-0 left-1/4 -translate-x-1/4 opacity-100"
+                  ? "bottom-0 left-1/4 -translate-x-1/4 opacity-100"
                   : itemIndex === 1
                   ? "top-0 right-1/4 translate-x-1/4 opacity-100"
                   : itemIndex === 2
-                  ? "bottom-0 left-1/4 -translate-x-1/4 opacity-100"
+                  ? "top-0 left-1/4 -translate-x-1/4 opacity-100"
                   : "bottom-0 right-1/4 translate-x-1/4 opacity-100"
                 : itemIndex === 0
-                  ? "top-0 left-1/4 -translate-x-1/4 opacity-0"
+                  ? "bottom-0 left-1/4 -translate-x-1/4 opacity-0"
                   : itemIndex === 1
                   ? "top-0 right-1/4 translate-x-1/4 opacity-0"
                   : itemIndex === 2
-                  ? "bottom-0 left-1/4 -translate-x-1/4 opacity-0"
+                  ? "top-0 left-1/4 -translate-x-1/4 opacity-0"
                   : "bottom-0 right-1/4 translate-x-1/4 opacity-0";
 
             return (

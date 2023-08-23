@@ -45,13 +45,13 @@ export default function Home() {
     }
   }, [selected])
 
-  const sectionClassName = "transition-all duration-1000 fixed w-full h-full left-0 overflow-y-auto pb-40";
-  const sectionStandard = "w-full sm:w-2/3 md:w-1/2 sm:mx-auto";
+  const sectionClassName = "transition-all duration-1000 fixed w-full h-full left-0 overflow-y-auto pb-40 sm:justify-center sm:flex sm:items-center";
+  const sectionStandard = "w-full sm:w-2/3 md:w-1/2 sm:mx-auto ";
 
   return (
     <main className={`transition-colors duration-1000 flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 ${colors.background || ''}`.trim()}>
       <div className="max-w-5xl w-full sm:static">
-        <div ref={(ref: any) => menuRef.current = ref} className="fixed block right-0 top-0 w-full justify-between sm:justify-center border-b bg-gradient-to-b from-zinc-700 mb-6 backdrop-blur-2xl border-neutral-800 bg-zinc-800 z-1 overflow-x-auto">
+        <div ref={(ref: any) => menuRef.current = ref} className="fixed block right-0 top-0 w-full justify-between sm:justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800 dark:from-inherit lg:bg-gray-200 lg:dark:bg-zinc-800 z-1 overflow-x-auto">
           <ul className="flex mb-3 mt-4 justify-center">
             {menuItems.map((item: MenuItem, i: number) => (
               <li key={`menu-item-${i}`} className={["px-5", i < menuItems.length - 1 ? "border-r-2 border-white" : null].join(" ")}>
