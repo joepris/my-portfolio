@@ -13,7 +13,7 @@ export const projectItems: Array<ProjectItem> = [
         technology: "Unity (C# with other built-in technologies)",
         description: "Explore the source code snippets of this portfolio website, using TypeScript and NextJS for dynamic web development. The site is elegantly styled using Tailwind CSS and deployed on Vercel.",
         to: "project-item-0",
-        repository: "https://github.com/joepris/my-portfolio",
+        repository: "https://bitbucket.org/zhuha-ent/workspace/overview/",
         images: ['village-life-pic1.png', 'village-life-pic2.png', 'village-life-pic3.png', 'village-life-pic4.png', 'village-life-pic5.png','village-life-pic6.png','village-life-pic7.png','village-life-pic8.png']
     },
     {
