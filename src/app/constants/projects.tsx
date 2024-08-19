@@ -9,7 +9,7 @@ export interface ProjectItem {
 
 export const projectItems: Array<ProjectItem> = [
     {
-        title: "Unity Game",
+        title: "Guild Tycoon - Unity Game",
         technology: "Unity (C# with other built-in technologies)",
         description: "Explore the source code snippets of this portfolio website, using TypeScript and NextJS for dynamic web development. The site is elegantly styled using Tailwind CSS and deployed on Vercel.",
         to: "project-item-0",
