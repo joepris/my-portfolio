@@ -7,7 +7,7 @@ export interface SkillItem {
 export const skillItems: Array<SkillItem> = [
     {
         label: "ASP.NET",
-        duration: "2 year"
+        duration: "3 years"
     },
     {
         label: "Unity",
@@ -15,7 +15,7 @@ export const skillItems: Array<SkillItem> = [
     },
     {
         label: "Bootstrap",
-        duration: "2 year"
+        duration: "2 years"
     },
     {
         label: "C#",
@@ -31,7 +31,7 @@ export const skillItems: Array<SkillItem> = [
     },
     {
         label: "Docker",
-        duration: "1 year",
+        duration: "3 months",
     },
     {
         label: "Git",
@@ -47,7 +47,7 @@ export const skillItems: Array<SkillItem> = [
     },
     {
         label: "Java",
-        duration: "1 year"
+        duration: "3 months"
     },
     {
         label: "JavaScript",
@@ -63,7 +63,7 @@ export const skillItems: Array<SkillItem> = [
     },
     {
         label: "NextJS",
-        duration: "2 year"
+        duration: "2 years"
     },
     {
         label: "NoSQL",
@@ -83,14 +83,14 @@ export const skillItems: Array<SkillItem> = [
     },
     {
         label: "SQL",
-        duration: "2 year"
+        duration: "2 years"
     },
     {
         label: "TailWind",
-        duration: "2 year"
+        duration: "2 years"
     },
     {
         label: "TypeScript",
-        duration: "2 year"
+        duration: "2 years"
     }
 ]
