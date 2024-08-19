@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export default function Footer() {
   return (
-    <div className="!fixed !w-full !sm:rounded-none py-4 right-0 bottom-0 block justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pl-4 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800 dark:from-inherit lg:static lg:w-auto lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800 overflow-x-auto !z-10">
+    <div className="!fixed !w-full !sm:rounded-none py-4 right-0 bottom-0 block justify-center pl-4 backdrop-blur-2xl border-zinc-800 bg-zinc-800 lg:static lg:w-auto lg:border lg:p-4 overflow-x-auto !z-10">
       <div className="w-full flex flex-wrap">
         <div className="w-full justify-center gap-x-4 inline-flex text-xs">
           <a href="https://github.com/joepris/" target="_blank" rel="noopener noreferrer" className="text-stone-100">

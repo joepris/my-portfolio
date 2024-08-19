@@ -5,7 +5,6 @@ import { MenuItem, menuItems } from './constants/menu'
 import Education from './components/sections/home';
 import Work from './components/sections/work';
 import Skills from './components/sections/skills';
-import Footer from './footer/page';
 import Portfolio from './components/sections/portfolio';
 
 export default function Home() {
@@ -49,8 +48,7 @@ export default function Home() {
   const sectionStandard = "w-full sm:w-2/3 md:w-1/2 sm:mx-auto ";
 
   return (
-    <main className={`transition-colors duration-1000 flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 ${colors.background || ''}`.trim()}>
-      <div className="max-w-5xl w-full sm:static">
+    <main className={`dark transition-colors duration-1000 flex min-h-screen flex-col items-center justify-between p-4 sm:p-8 ${colors.background || ''}`.trim()}>
         <div ref={(ref: any) => menuRef.current = ref} className="fixed block right-0 top-0 w-full justify-between sm:justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800 dark:from-inherit lg:bg-gray-200 lg:dark:bg-zinc-800 z-1 overflow-x-auto">
           <ul className="flex mb-3 mt-4 justify-center">
             {menuItems.map((item: MenuItem, i: number) => (
@@ -62,11 +60,11 @@ export default function Home() {
         </div>
 
         <div className={`relative mt-12 sm:mt-8`}>
-          <section ref={(ref: any) => addRef(ref)} id='menu-item-0' className={[sectionClassName, selected === 'menu-item-0' ? 'opacity-100' : 'opacity-0 -translate-x-full'].join(' ')}>
+          <section ref={(ref: any) => addRef(ref)} id='menu-item-0' className={["pt-20", sectionClassName, selected === 'menu-item-0' ? 'opacity-100' : 'opacity-0 -translate-x-full'].join(' ')}>
             <Education onPortfolioLinkClick={() => setSelected('menu-item-3')} className={sectionStandard} />
           </section>
 
-          <section ref={(ref: any) => addRef(ref)} id='menu-item-1' className={[sectionClassName, selected === 'menu-item-1' ? 'opacity-100' : 'opacity-0 translate-x-full'].join(' ')}>
+          <section ref={(ref: any) => addRef(ref)} id='menu-item-1' className={["pt-60", sectionClassName, selected === 'menu-item-1' ? 'opacity-100' : 'opacity-0 translate-x-full'].join(' ')}>
             <Work className={sectionStandard} />
           </section>
 
@@ -79,7 +77,6 @@ export default function Home() {
           </section>
 
         </div>
-      </div>
     </main>
   )
 }
