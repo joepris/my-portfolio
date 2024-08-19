@@ -6,6 +6,10 @@ export interface WorkItem {
 
 export const workItems: Array<WorkItem> = [
     {
+        label: "Indie Game Developer",
+        job_name: "Unity Game Developer",
+        description: "Developed diverse apps using Unity, showcasing a range of skills and creativity in game development. Designed and implemented engaging user experiences with a focus on interactivity and functionality. Managed all aspects of development independently, demonstrating strong problem-solving abilities and attention to detail."
+    },{
         label: "Millenium Global Business Solutions - Bow Valley College Contract",
         job_name: "Junior Software Developer",
         description: "Created a highly efficient and streamlined Hospital Scheduling App using ASP.NET MVC, designed to optimize scheduling and management processes within healthcare facilities. Leveraged expert proficiency in C# programming and the ASP.NET MVC framework to develop a robust and maintainable codebase."
