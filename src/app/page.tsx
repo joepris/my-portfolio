@@ -53,7 +53,7 @@ export default function Home() {
           <ul className="flex mb-3 mt-4 justify-center">
             {menuItems.map((item: MenuItem, i: number) => (
               <li key={`menu-item-${i}`} className={["px-5", i < menuItems.length - 1 ? "border-r-2 border-white" : null].join(" ")}>
-                <button onClick={() => setSelected(item.to || "")} className="text-xs sm:text-normal hover:text-yellow-500 hover:dark:border-neutral-700 hover:dark:text-yellow-500">{item.label}</button>
+                <button onClick={() => setSelected(item.to || "")} className="capitalize text-xs sm:text-normal hover:text-yellow-500 hover:dark:border-neutral-700 hover:dark:text-yellow-500">{item.label}</button>
               </li>
             ))}
           </ul>
@@ -64,7 +64,7 @@ export default function Home() {
             <Education onPortfolioLinkClick={() => setSelected('menu-item-3')} className={sectionStandard} />
           </section>
 
-          <section ref={(ref: any) => addRef(ref)} id='menu-item-1' className={["pt-60", sectionClassName, selected === 'menu-item-1' ? 'opacity-100' : 'opacity-0 translate-x-full'].join(' ')}>
+          <section ref={(ref: any) => addRef(ref)} id='menu-item-1' className={["pt-20", sectionClassName, selected === 'menu-item-1' ? 'opacity-100' : 'opacity-0 translate-x-full'].join(' ')}>
             <Work className={sectionStandard} />
           </section>
 

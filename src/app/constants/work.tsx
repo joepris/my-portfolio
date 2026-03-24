@@ -16,11 +16,6 @@ export const workItems: Array<WorkItem> = [
         description: "Developed an ASP.NET MVC Application, Hospital Scheduling App, designed for efficient streamline scheduling and management processes within hospitals. Utilized C# and the ASP.NET MVC framework to ensure efficient and maintainable codebase."
     },
     {
-        label: "Pine Code",
-        job_name: "Junior Software Developer",
-        description: "Managed the development and ongoing maintenance of websites while enhancing existing applications. Leveraged a diverse range of technologies including HTML, CSS, JavaScript, ReactJS, NextJS, and TypeScript to craft visually appealing and functional websites based on design specifications and mockups."
-    },
-    {
         label: "Rio Tuba Nickel Mining Corporation",
         job_name: "Mining Engineer Intern",
         description: "I enhanced my skills in optimization, efficiency, and data analysis, can be directly translated to software development. By applying these skills, I can contribute to creating high-performance software, improving workflows, and leveraging data-driven solutions by optimizing algorithms, data structures, and code execution, I can enhance the overall efficiency and speed of software applications."

@@ -1,0 +1,108 @@
+.page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(56, 189, 248, 0.2), transparent 42%),
+    radial-gradient(circle at 88% 20%, rgba(217, 70, 239, 0.17), transparent 35%),
+    radial-gradient(circle at 45% 78%, rgba(16, 185, 129, 0.16), transparent 40%),
+    #020617;
+  color: #e2e8f0;
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse at center, black 55%, transparent 100%);
+  pointer-events: none;
+}
+
+.aurora {
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.a1 {
+  top: -8rem;
+  left: -6rem;
+  background: linear-gradient(180deg, #22d3ee 0%, #9333ea 90%);
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+.a2 {
+  top: 12rem;
+  right: -7rem;
+  background: linear-gradient(180deg, #22c55e 0%, #06b6d4 100%);
+  animation: drift 22s ease-in-out infinite alternate-reverse;
+}
+
+.a3 {
+  bottom: -9rem;
+  left: 35%;
+  background: linear-gradient(180deg, #f97316 0%, #e11d48 100%);
+  animation: drift 26s ease-in-out infinite alternate;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  animation: reveal 850ms ease forwards;
+}
+
+.delay1 { animation-delay: 0.1s; }
+.delay2 { animation-delay: 0.2s; }
+.delay3 { animation-delay: 0.3s; }
+.delay4 { animation-delay: 0.4s; }
+
+.pulseRing {
+  position: absolute;
+  inset: -12px;
+  border: 1px solid rgba(56, 189, 248, 0.45);
+  border-radius: 1.2rem;
+  animation: pulse 2.6s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -18px) scale(1.07);
+  }
+  100% {
+    transform: translate(-24px, 16px) scale(0.94);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.98);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
