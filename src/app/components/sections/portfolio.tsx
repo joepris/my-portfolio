@@ -25,7 +25,7 @@ export default function Portfolio({
   }, [selectedImage])
 
   return (
-    <div className={`w-full h-full ${className}`.trim()} {...props}>
+    <div className={`w-full ${className}`.trim()} {...props}>
       <div className="inline-flex justify-center gap-x-3 w-full mx-auto shadow-lg shadow-slate-800 pb-4">
         {projectItems.map((item: ProjectItem, i: number) => {
           return (
@@ -39,7 +39,7 @@ export default function Portfolio({
           );
         })}
       </div>
-      <div className="w-full">
+      <div className="relative w-full">
         {/* lightbox */}
         {selectedImage && (
           <div
@@ -53,9 +53,11 @@ export default function Portfolio({
           </div>
         )}
         {projectItems.map((item: ProjectItem, i: number) => {
+          if (selected !== item.title) return null;
+
           return (
-            <div key={`project-content-${i}`} className={['fixed w-full h-full left-1/2 -translate-x-1/2 sm:w-2/3 transition-all duration-1000 overflow-y-auto pb-60', selected === item.title ? 'opacity-100 z-40' : `opacity-0`].join(' ')}>
-              <h1 className="font-light pt-5 px-5 text-center text-xl">
+            <div key={`project-content-${i}`} className="w-full pb-8">
+              <h1 className="font-light pt-2 px-5 text-center text-xl">
                 {item.title}
               </h1>
               <h4 className="p-1 px-5 text-sm text-center">Technologies used: {item.technology}</h4>
@@ -75,13 +77,11 @@ export default function Portfolio({
                     </div>
                   ))}
                 </div>
-
               )}
               <a href={[item.repository != undefined ? item.repository : "#"].join()} target="blank" rel="noopener noreferrer" className="text-stone-100">
                 <i className="!flex !flex-row !justify-center fab fa-github px-5 p-2 hover:text-yellow-500">&nbsp;Visit the Source Code</i>
               </a>
             </div>
-
           )
         })}
       </div>

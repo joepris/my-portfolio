@@ -181,7 +181,6 @@ export default function NextHomePage() {
                 className="rounded-full border border-slate-600/60 bg-slate-900/70 px-4 py-2 text-sm text-slate-200"
               >
                 {skill.label}
-                <span className="ml-2 text-slate-400">{skill.duration}</span>
               </div>
             ))}
           </div>
