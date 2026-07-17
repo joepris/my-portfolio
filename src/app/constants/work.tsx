@@ -6,6 +6,11 @@ export interface WorkItem {
 
 export const workItems: Array<WorkItem> = [
     {
+        label: "Advanced World Solutions",
+        job_name: "Junior Reasearch and Development Engineer",
+        description: "Currently working as a Junior Research and Development Engineer. My responsibilities include conducting research, developing innovative solutions, and contributing to the advancement of technology within the organization."
+    },
+    {
         label: "Indie Game Developer",
         job_name: "Unity Game Developer",
         description: "Developed diverse apps using Unity, showcasing a range of skills and creativity in game development. Designed and implemented engaging user experiences with a focus on interactivity and functionality. Managed all aspects of development independently, demonstrating strong problem-solving abilities and attention to detail."
